@@ -38,7 +38,7 @@ public class PersonId
     /// Get year of birth from PESEL
     /// </summary>
     /// <returns></returns>
-    public int GetYearOfBirth()
+    public int GetAge()
     {
         return 0;
     }

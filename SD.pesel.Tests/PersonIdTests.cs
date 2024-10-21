@@ -1,4 +1,3 @@
-using Xunit;
 using SD.pesel;
 
 public class PersonIdTests
@@ -47,22 +46,22 @@ public class PersonIdTests
     }
 
     [Theory]
-    [InlineData("44051401359", 1944)]
-    [InlineData("07291495676", 2007)]
-    public void GetYearOfBirth_ShouldReturnCorrectYearOfBirth(string pesel, int expectedYearOfBirth)
+    [InlineData("44051401359", 90)]
+    [InlineData("07291495676", 17)]
+    public void GetYearOfBirth_ShouldReturnCorrectAge(string pesel, int expectedAge)
     {
         // Arrange
         var personId = new PersonId(pesel);
 
         // Act
-        var yearOfBirth = personId.GetYearOfBirth();
+        var age = personId.GetAge();
 
         // Assert
-        Assert.Equal(expectedYearOfBirth, yearOfBirth);
+        Assert.Equal(expectedAge, age);
     }
 
     [Theory]
-    [InlineData("44051401359", "m")]
+    [InlineData("44051401369", "m")]
     [InlineData("01260389836", "k")]
     public void GetGender_ShouldReturnCorrectGender(string pesel, string expectedGender)
     {

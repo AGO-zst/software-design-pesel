@@ -16,9 +16,9 @@ if (isValid)
     int month = personId.GetMonth();
     int year = personId.GetYear();
     string gender = personId.GetGender();
-    int yearOfBirth = personId.GetYearOfBirth();
+    int age = personId.GetAge();
 
-    Console.WriteLine($"PESEL jest poprawny. Data urodzenia: {day}.{month}.{year} płeć: {gender}, masz: {yearOfBirth} lat.");
+    Console.WriteLine($"PESEL jest poprawny. Data urodzenia: {day}.{month}.{year} płeć: {gender}, masz: {age} lat.");
 }
 else
 {

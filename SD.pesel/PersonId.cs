@@ -8,6 +8,7 @@ public class PersonId
     {
         _id = Id;
     }
+
     /// <summary>
     /// Get full year from PESEL
     /// </summary>
@@ -31,11 +32,15 @@ public class PersonId
     /// <returns></returns>
     public int GetDay()
     {
-        return 0;
+        string id = _id;
+        string result = id.Substring(4, 2);
+        int resultInt = int.Parse(result);
+
+        return resultInt;
     }
 
     /// <summary>
-    /// Get year of birth from PESEL
+    /// Get age from PESEL
     /// </summary>
     /// <returns></returns>
     public int GetAge()
@@ -47,7 +52,7 @@ public class PersonId
     /// Get gender from PESEL
     /// </summary>
     /// <returns>m</returns>
-    /// <returns>f</returns>
+    /// <returns>k</returns>
     public string GetGender()
     {
         return "";
